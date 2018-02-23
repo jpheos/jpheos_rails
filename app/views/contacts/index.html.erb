@@ -1,0 +1,38 @@
+<div class="container container-contacts">
+
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-9 col-xs-6 col-xs-offset-3">
+      <%= link_to "synchronisation", synchronization_contacts_path, class: 'btn btn-primary btn-block'%>
+    </div>
+  </div>
+
+  <div class="row contacts">
+    <% @contacts.each do |contact| %>
+      <div class="col-md-4 col-sm-6">
+        <% next_birthday = contact.next_birthday %>
+        <div class="contact-card">
+          <div class="contact-card-header">
+            <div class="container-avatar">
+
+              <%=
+                image_tag("data:image/jpeg;base64, #{Base64.encode64(contact.photo64)}", alt: contact.name, class: 'avatar')
+              %>
+            </div>
+            <div class="container-header">
+              <h3><%= contact.name %></h3>
+              <p>
+                <%= icon('fas', 'birthday-cake') %>
+                <%= l contact.birthday, format: :long %>
+              </p>
+            </div>
+          </div>
+          <div class="contact-card-body">
+
+            <p><span class="days-number"><%= next_birthday[:day_number] %></span> jours dans <span class="days-count"><%= contact.nb_days_before_next_birthday %></span> jours.</p>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

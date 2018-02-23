@@ -1,0 +1,14 @@
+<h1>Pushbullet devices</h1>
+
+<%= form_tag(pushbullet_select_device_path) do %>
+
+  <% @devices.each do |device| %>
+
+    <%= radio_button_tag 'device_id', device[:id] %>
+    <%= label_tag "device_id_#{device[:id]}", device[:name] %>
+    <br>
+  <% end %>
+
+
+  <%= submit_tag %>
+<% end %>

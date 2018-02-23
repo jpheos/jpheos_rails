@@ -1,0 +1,18 @@
+<div class="navbar-jpheos">
+  <!-- Logo -->
+  <a href="/" class="navbar-jpheos-brand">
+    jpheos
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-jpheos-right">
+    <% if user_signed_in? %>
+
+    <%= link_to "Relier pushbullet", pushbullet_connect_path, class: 'navbar-jpheos-item navbar-jpheos-link' %>
+    <%= link_to "contacts", contacts_path, class: 'navbar-jpheos-item navbar-jpheos-link' %>
+    <%= link_to "deconnexion", destroy_user_session_path, method: :delete, class: "navbar-jpheos-item navbar-jpheos-link" %>
+
+    <% end %>
+  </div>
+
+</div>

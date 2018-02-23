@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        password: Mot de passe
+        password_confirmation: "Confirmation du mot de passe"
+        remember_me: Se souvenir de moi
+
+  date:
+    formats:
+      default: "%d/%m/%y"
+      months: "%d %B %Y"

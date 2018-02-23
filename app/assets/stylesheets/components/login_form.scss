@@ -1,0 +1,53 @@
+$google-button-color: #e04932;
+
+.login_form{
+  margin-top: 100px;
+  background-color: $white;
+  padding: 20px 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+
+  h2{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-google {
+    margin-top: 10px;
+    background-color: $google-button-color;
+    text-align: left;
+    padding: 0px;
+    color: lighten($google-button-color, 30%);
+
+
+    .provider-icon{
+      height: 33px;
+      display: inline-block;
+      padding: 6px 20px;
+      border-right: 1px solid ;
+    }
+
+    .link-text {
+      text-align: center;
+      display: inline-block;
+      width: calc(100% - 55px);
+    }
+
+    &:hover{
+      background-color: #bc2f1a;
+    }
+  }
+
+  .links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+
+
