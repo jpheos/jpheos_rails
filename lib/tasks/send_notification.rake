@@ -13,7 +13,7 @@ task :send_notification => :environment do
     end
 
     push = SendPush.new(user.pushbullet_token.access_token, user.pushbullet_token.device)
-    push.send_birthdays_x_day(birthdays_x_day)
+    push.send_birthdays_x_day(birthdays_x_day) unless birthdays_x_day.empty?
   end
 end
 

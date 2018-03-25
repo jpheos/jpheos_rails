@@ -8,6 +8,7 @@ class SynchronizeContacts
   end
 
   def call
+    return unless @user.oauth_token
     contacts_params = GetContactsFromGoogle.call(@user.oauth_token.access_token)
     google_ids = contacts_params.map { |x| x[:google_id] }
     Contact.where.not(google_id: google_ids).destroy_all
