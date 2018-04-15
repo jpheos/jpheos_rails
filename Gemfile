@@ -47,7 +47,7 @@ gem 'omniauth-google-oauth2'
 gem 'google_contacts_api'
 gem 'pushbullet_ruby'
 gem 'oauth2', '~> 1.4.0'
-
+gem 'rollbar'
 
 
 group :development, :test do
